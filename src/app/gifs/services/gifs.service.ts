@@ -7,17 +7,16 @@ import { Injectable } from '@angular/core';
 export class GifsService {
 
   constructor(private http: HttpClient) {
-    let arr:any =  localStorage.getItem('items')?.split(',')
-    console.log(arr);
-    this._historial = arr
-   }
-
-  private _historial: string[] = []
+    this._historial = this.arrData
+  }
+  
+  public _historial: string[] = []
   private apikey: string = 'x3Bg2WCOHUhVQbdwQDbM9SDhY2nwQxoi'
   
   private urlGifs :string = 'https://api.giphy.com/v1/gifs/search'
   private urlStickes :string = 'https://api.giphy.com/v1/stickers/search'
   
+  public arrData:any =  localStorage.getItem('items')?.split(',')
   public items: any[] = []
   
   search(query:string) {

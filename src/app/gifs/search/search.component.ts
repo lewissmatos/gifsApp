@@ -11,22 +11,25 @@ export class SearchComponent implements OnInit {
   constructor(private gifsData: GifsService) { }
 
   ngOnInit(): void {
+    this.gifsData.search(this.gifsData.arrData[0])
   }
 
   @ViewChild('seachVaue') seachVaue!: ElementRef
 
+  value: string = ''
+  
   search() {
 
-    let value = this.seachVaue.nativeElement.value
+    this.value = this.seachVaue.nativeElement.value
 
-    if (value.trim().length === 0) {
+    if (this.value.trim().length === 0) {
       return
     } else
-    this.gifsData.searchGifs(value)
+    this.gifsData.searchGifs(this.value)
     
     this.seachVaue.nativeElement.value = ''
 
-    this.gifsData.search(value)
+    this.gifsData.search(this.value)
   }
 
   

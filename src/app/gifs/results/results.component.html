@@ -1,17 +1,6 @@
+<h3 class="mb-3">Resultados de: {{result | titlecase}}</h3>
 <div class="gallery">
     
-    <!-- <div class="row">
-        <div 
-        *ngFor="let gif of gifs"
-        class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-            <div class="card">
-                <img [src]="gif.images.downsized_medium.url" [alt]="gif.title">
-                <div class="card-body">
-                    <h6 class="card-text">{{gif.title}}</h6>
-                </div>
-            </div>    
-        </div>
-    </div> -->
     
     <div *ngFor="let gif of gifs">
         <div class="card">

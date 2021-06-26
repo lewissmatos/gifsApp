@@ -12,8 +12,10 @@ export class ResultsComponent implements OnInit {
   constructor(private data: GifsService) { }
 
   gifs:any[] = []
-  ngOnInit(): void {
-  
+  result :string = ''
+  ngOnInit(): void {  
+    this.result = this.data._historial[0]
+    console.log(this.result);
   }
 
   ngDoCheck(): void {
