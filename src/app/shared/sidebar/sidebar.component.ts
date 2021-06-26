@@ -18,15 +18,14 @@ export class SidebarComponent implements OnInit {
   }
   
   ngDoCheck(): void {
-    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
-    //Add 'implements DoCheck' to the class.
     this.getHistory()
-    
   }
 
   getHistory() {
     this.history = this.data.history
-    console.log(this.data.history);
   }
 
+  search(item: string) {
+    this.data.search(item)
+  }
 }

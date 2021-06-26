@@ -19,9 +19,14 @@ export class SearchComponent implements OnInit {
 
     let value = this.seachVaue.nativeElement.value
 
+    if (value.trim().length === 0) {
+      return
+    } else
     this.gifsData.searchGifs(value)
     
     this.seachVaue.nativeElement.value = ''
+
+    this.gifsData.search(value)
   }
 
   

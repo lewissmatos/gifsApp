@@ -6,6 +6,6 @@
     <h5>Historial</h5>
     <div class="list-group list-reset">
       
-          <a *ngFor="let item of history" href="#" class="sidebar-item mt-3">{{item}}</a>
+          <a (click)="search(item)" *ngFor="let item of history" href="#" class="sidebar-item mt-3 ">{{item | titlecase}}</a>
     </div>
   </div>

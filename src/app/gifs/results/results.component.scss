@@ -1,0 +1,14 @@
+img{
+    border-radius: 12px 12px 0px 0px;
+}
+
+.card{
+    
+    border-radius: 12px;
+}
+
+.gallery{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
